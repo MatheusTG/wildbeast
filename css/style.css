@@ -202,3 +202,24 @@ body {
 }
 /* Anúncios */
 
+.ads {
+  padding: 30px;
+  background-color: #FAFBFC;
+}
+
+.ads img {
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 1.2rem;
+}
