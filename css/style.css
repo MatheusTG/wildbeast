@@ -18,11 +18,12 @@ a {
 
 body {
   display: grid;
+  justify-content: space-between;
   grid-template: 
     "header   header  header"
     "sidenav  main    ads"
     "footer   footer  footer"
-    / 1fr 3fr 1fr;
+    / 1fr 3fr 300px;
 }
 
 /* Header */
@@ -34,7 +35,7 @@ body {
   align-items: center;
   gap: 20px;
   background: linear-gradient(135deg, #8844ee, #b07dfb);
-  padding: 32px;
+  padding: 36px 30px;
 }
 
 .header .logo {
@@ -86,9 +87,11 @@ body {
 /* Conteúdo Principal */
 .principal {
   grid-area: main;
+  justify-self: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  max-width: 900px;
   padding: 30px;
 }
 
