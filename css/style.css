@@ -17,11 +17,17 @@ a {
 }
 
 body {
-  height: 2000px;
+  display: grid;
+  grid-template: 
+    "header   header  header"
+    "sidenav  main    ads"
+    "footer footer footer"
+    / 1fr 1fr 1fr;
 }
 
 /* Header */
 .header {
+  grid-area: header;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,3 +55,16 @@ body {
 .nav-principal a:hover {
   background-color: #563C7D;
 }
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+}
+
+/* Conteúdo Principal */
+.principal {
+  grid-area: main;
+}
+
+/* Anúncios */
+
