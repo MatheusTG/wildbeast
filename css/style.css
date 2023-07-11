@@ -33,9 +33,9 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
   background: linear-gradient(135deg, #8844ee, #b07dfb);
-  padding: 36px 30px;
+  padding: 30px;
 }
 
 .header .logo {
@@ -48,11 +48,13 @@ body {
 }
 
 .nav-principal a {
+  display: block;
   background: rgba(0, 0, 0, 0.1);
   color: white;
   padding: 10px;
   border-radius: 4px;
   font-size: 1.125rem;
+  transition: background 0.1s;
 }
 
 .nav-principal a:hover {
@@ -73,11 +75,12 @@ body {
 
 .sidenav-container li {
   background-color: white;
-  padding: 16px 20px;
+  padding: 15px 20px;
   border-radius: 5px;
   box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
   max-width: 100px;
   margin: 0 auto;
+  transition: background 0.1s;
 }
 
 .sidenav-container li:hover {
@@ -114,6 +117,7 @@ body {
 .caracteristicas {
   display: flex;
   gap: 30px;
+  align-self: start;
 }
 
 .caracteristicas div {
@@ -241,11 +245,20 @@ body {
       "sidenav  main"
       "sidenav  ads"
       "footer   footer"
-      / 1fr 4fr;
+      / minmax(160px, 1fr) 4fr;
   }
   .ads {
     display: flex;
     gap: 30px;
+  }
+}
+
+@keyframes seta {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
   }
 }
 
@@ -265,9 +278,19 @@ body {
   }
   .sidenav-container {
     grid-auto-flow: column;
-    width: calc(100vw - 17px);
-    padding: 30px 0;
+    width: calc(100vw - 47px);
+    padding: 30px 0 30px 30px;
     overflow-x: scroll;
+    position: relative;
+  }
+  .sidenav-container:after {
+    content: "→";
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: rgba(0, 0, 0, 0.3);
+    animation: seta .5s ease-in 0s infinite alternate;
   }
   .sidenav-container li {
     width: 60px;
