@@ -2,6 +2,8 @@
 
 **Wildbeast** is a project developed during the Origamid course on **CSS Grid Layout**, focused on practicing and applying Grid concepts and responsive design in real-world layouts.
 
+[**Origamid CSS Grid Layout Course Certificate**](https://origamid.com/certificate/77144d61)
+
 ## 🚀 Technologies Used
 
 | Technology | Description |
